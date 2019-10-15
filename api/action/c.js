@@ -1,0 +1,167 @@
+const Router = require("koa-router");
+const router = Router();
+
+// 权限管理-管理角色-操作授权dialog
+router.get("/c", function (ctx, next) {
+	ctx.set('Content-Type', 'application/json');
+	var data = {
+		"code": "0",
+		"msg": "",
+		"count": 25,
+		"data": [{
+			"checked": false,
+			"children": [{
+				"checked": true,
+				"id": "13",
+				"title": "项目库管理"
+			}, {
+				"checked": true,
+				"id": "14",
+				"title": "指标方案管理"
+			}, {
+				"checked": true,
+				"id": "15",
+				"title": "指标方案配置"
+			}, {
+				"checked": true,
+				"id": "16",
+				"title": "专家管理"
+			}, {
+				"checked": true,
+				"id": "17",
+				"title": "制度管理"
+			}, {
+				"checked": true,
+				"id": "18",
+				"title": "宏观经济"
+			}, {
+				"checked": true,
+				"id": "19",
+				"title": "标准库管理"
+			}, {
+				"checked": true,
+				"id": "20",
+				"title": "案例库管理"
+			}, {
+				"checked": true,
+				"id": "21",
+				"title": "结果库管理"
+			}],
+			"id": "1",
+			"title": "基础库管理"
+		}, {
+			"checked": false,
+			"children": [{
+				"checked": true,
+				"id": "25",
+				"title": "绩效目标申报"
+			}, {
+				"checked": true,
+				"id": "26",
+				"title": "目标申报"
+			}, {
+				"checked": false,
+				"id": "27",
+				"title": "目标申报"
+			}, {
+				"checked": false,
+				"id": "28",
+				"title": "财政初审"
+			}, {
+				"checked": false,
+				"id": "29",
+				"title": "财政初审"
+			}, {
+				"checked": false,
+				"id": "30",
+				"title": "财政初审"
+			}, {
+				"checked": false,
+				"id": "31",
+				"title": "反馈"
+			}, {
+				"checked": false,
+				"id": "32",
+				"title": "反馈"
+			}, {
+				"checked": false,
+				"id": "33",
+				"title": "财政复审"
+			}, {
+				"checked": false,
+				"id": "34",
+				"title": "财政复审"
+			}, {
+				"checked": false,
+				"id": "35",
+				"title": "政府决定"
+			}, {
+				"checked": false,
+				"id": "36",
+				"title": "人大批复"
+			}, {
+				"checked": false,
+				"id": "37",
+				"title": "设置专家"
+			}],
+			"id": "2",
+			"title": "绩效目标管理"
+		}, {
+			"checked": false,
+			"id": "3",
+			"title": "绩效运行监控"
+		}, {
+			"checked": false,
+			"id": "4",
+			"title": "绩效自评管理"
+		}, {
+			"checked": false,
+			"id": "5",
+			"title": "重点评价"
+		}, {
+			"checked": false,
+			"id": "6",
+			"title": "结果应用"
+		}, {
+			"checked": false,
+			"id": "7",
+			"title": "综合查询"
+		}, {
+			"checked": false,
+			"children": [{
+				"checked": true,
+				"id": "22",
+				"title": "管理用户"
+			}, {
+				"checked": true,
+				"id": "23",
+				"title": "管理角色"
+			}, {
+				"checked": true,
+				"id": "24",
+				"title": "单位管理"
+			}],
+			"id": "8",
+			"title": "权限管理"
+		}, {
+			"checked": false,
+			"id": "9",
+			"title": "基础数据设置"
+		}, {
+			"checked": false,
+			"id": "10",
+			"title": "配置管理"
+		}, {
+			"checked": false,
+			"id": "11",
+			"title": "流程管理"
+		}, {
+			"checked": false,
+			"id": "12",
+			"title": "公告管理"
+		}]
+	};
+	ctx.body = JSON.stringify(data);
+});
+
+exports = module.exports = router;
