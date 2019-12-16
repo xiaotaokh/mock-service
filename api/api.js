@@ -7,7 +7,7 @@ const a = require('./action/a')
 const b = require('./action/b')
 const c = require('./action/c')
 const d = require('./action/d')
-const menuManage = require('./action/menuManage/menuManage')
+const index = require('./action/index/index')
 
 router.post('/action', function (ctx, next) {
 	ctx.set('Content-Type', 'application/json');
@@ -27,5 +27,5 @@ router.use('/action', a.routes());
 router.use('/action', b.routes());
 router.use('/action', c.routes());
 router.use('/action', d.routes());
-router.use('/action', menuManage.routes());
+router.use('/action', index.routes());
 exports = module.exports = router;
